@@ -23,34 +23,6 @@ console.log(typeof datasugg);
  */
 $(document).ready(function () {
     if ($(".home-page").length != 0) {
-        $(
-            "header .mainHeader #sidebar, header .mainHeader #burgerMenuIcon, header .mainHeader .blacklayer"
-        ).mouseover(function () {
-            $("header .mainHeader #sidebar").css(
-                "background-color",
-                "rgb(249, 244, 242"
-            );
-            $("header .mainHeader #sidebar nav ul li a").css(
-                "color",
-                "#333333"
-            );
-            $("header .mainHeader #sidebar .signin-check").css(
-                "color",
-                "#333333"
-            );
-        });
-        $(
-            "header .mainHeader #sidebar, header .mainHeader #burgerMenuIcon, header .mainHeader .blacklayer"
-        ).mouseout(function () {
-            $("header .mainHeader #sidebar").css(
-                "background-color",
-                "transparent"
-            );
-            $("header .mainHeader #sidebar nav ul li a").css(
-                "color",
-                "rgb(249, 244, 242"
-            );
-        });
     } else if ($(".market-page").length != 0) {
         let suggestions = [];
         let a = document.querySelectorAll(
