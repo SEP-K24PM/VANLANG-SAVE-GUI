@@ -18,21 +18,21 @@
     <meta property="og:site_name" content="" />
     <meta property="og:image" content="" />
 
-    <link rel="stylesheet" href="dest/style.min.css">
-    <link rel="stylesheet" href="dest/fonts.css">
+    <link rel="stylesheet" href="/dest/style.min.css">
+    <link rel="stylesheet" href="/dest/fonts.css">
     <style>
         @font-face {
             font-family: 'KS';
-            src: url('fonts/KeplerStd-Disp.woff2') format('woff2'),
-                url('fonts/KeplerStd-Disp.woff') format('woff');
+            src: url('/fonts/KeplerStd-Disp.woff2') format('woff2'),
+                url('/fonts/KeplerStd-Disp.woff') format('woff');
             font-weight: normal;
             font-style: normal;
             font-display: fallback;
         }
         @font-face {
     font-family: 'LatoThin';
-    src: url('fonts/Lato-Thin.woff2') format('woff2'),
-        url('fonts/Lato-Thin.woff') format('woff');
+    src: url('/fonts/Lato-Thin.woff2') format('woff2'),
+        url('/fonts/Lato-Thin.woff') format('woff');
     font-weight: 100;
     font-style: normal;
     font-display: fallback;
@@ -40,8 +40,8 @@
 
 @font-face {
     font-family: 'LatoMedium';
-    src: url('fonts/Lato-Medium.woff2') format('woff2'),
-        url('fonts/Lato-Medium.woff') format('woff');
+    src: url('/fonts/Lato-Medium.woff2') format('woff2'),
+        url('/fonts/Lato-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: fallback;
@@ -49,8 +49,8 @@
 
 @font-face {
     font-family: 'LatoBlack';
-    src: url('fonts/Lato-Black.woff2') format('woff2'),
-        url('fonts/Lato-Black.woff') format('woff');
+    src: url('/fonts/Lato-Black.woff2') format('woff2'),
+        url('/fonts/Lato-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: fallback;
@@ -58,8 +58,8 @@
 
 @font-face {
     font-family: 'LatoBold';
-    src: url('fonts/Lato-Bold.woff2') format('woff2'),
-        url('fonts/Lato-Bold.woff') format('woff');
+    src: url('/fonts/Lato-Bold.woff2') format('woff2'),
+        url('/fonts/Lato-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: fallback;
@@ -68,16 +68,16 @@
 
         @font-face {
     font-family: 'SPB';
-    src: url('fonts/SofiaPro-SemiBold.woff2') format('woff2'),
-        url('fonts/SofiaPro-SemiBold.woff') format('woff');
+    src: url('/fonts/SofiaPro-SemiBold.woff2') format('woff2'),
+        url('/fonts/SofiaPro-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: fallback;
 }
      @font-face {
     font-family: 'SP';
-    src: url('fonts/SofiaPro.woff2') format('woff2'),
-        url('fonts/SofiaPro.woff') format('woff');
+    src: url('/fonts/SofiaPro.woff2') format('woff2'),
+        url('/fonts/SofiaPro.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: fallback;
@@ -85,8 +85,8 @@
 
 @font-face {
     font-family: 'BNB';
-    src: url('fonts/BluuNext-Bold.woff2') format('woff2'),
-        url('fonts/BluuNext-Bold.woff') format('woff');
+    src: url('/fonts/BluuNext-Bold.woff2') format('woff2'),
+        url('/fonts/BluuNext-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: fallback;
@@ -133,7 +133,7 @@
     <main class="inventory-page">
         <section class="bannerinventory">
             <div class="textboxbanner">
-                <h2>Your inventory</h2>
+                <h2>Quản lý kho</h2>
                  <p class="desc">Dive into our market spanning Clothes, Souvenir, Personal Belongings, Books, Tickets, Sports Equipments, Electronics and other categories.</p>
             </div>
         </section>
@@ -148,7 +148,7 @@
                   </div>
                 <div class="inventory__wrap">
                     <div class="inventory__wrap-top">
-                        <a href="" class="button addproduct">
+                        <a href="/user/addProduct.html" class="button addproduct">
                             <p>Thêm sản phẩm</p>
                             <div class="img">
                                 <img src="img/icons/closebtn.svg" alt="">
@@ -158,7 +158,7 @@
                             <p>Xóa sản phẩm</p>
                             <div class="img">
                                 <img src="img/icons/closebtn.svg" alt="">
-                            </div></div>
+                            </div>
                         </div>
                     </div>
                     <div class="inventory__wrap-bottom">
@@ -182,7 +182,7 @@
                                     <td class="origin">Việt Nam</td>
                                     <td class="value">1.000.000</td>
                                     <td class="used-time">1 tháng</td>
-                                    <td class="amount">1</td>
+                                    <td class="quantity">1</td>
                                     <td><p class="status status-available">Sẵn có</p></td>
                                     <td>
                                         <div class="button-check">
@@ -196,7 +196,7 @@
                                     <td class="origin">Việt Nam</td>
                                     <td class="value">1.000.000</td>
                                     <td class="used-time">1 tháng</td>
-                                    <td class="amount">1</td>
+                                    <td class="quantity">1</td>
                                     <td><p class="status status-done">Đã giao dịch</p></td>
                                     <td>
                                         <div class="button-check">
@@ -210,7 +210,7 @@
                                     <td class="origin">Việt Nam</td>
                                     <td class="value">1.000.000</td>
                                     <td class="used-time">1 tháng</td>
-                                    <td class="amount">1</td>
+                                    <td class="quantity">1</td>
                                     <td><p class="status status-pending">Đang giao dịch</p></td>
                                     <td>
                                         <div class="button-check">
@@ -224,7 +224,7 @@
                                     <td class="origin">Việt Nam</td>
                                     <td class="value">1.000.000</td>
                                     <td class="used-time">1 tháng</td>
-                                    <td class="amount">1</td>
+                                    <td class="quantity">1</td>
                                     <td><p class="status status-pending">Đang giao dịch</p></td>
                                     <td>
                                         <div class="button-check">
@@ -238,7 +238,7 @@
                                     <td class="origin">Việt Nam</td>
                                     <td class="value">1.000.000</td>
                                     <td class="used-time">1 tháng</td>
-                                    <td class="amount">1</td>
+                                    <td class="quantity">1</td>
                                     <td><p class="status status-available">Sẵn có</p></td>
                                     <td>
                                         <div class="button-check">
@@ -252,7 +252,7 @@
                                     <td class="origin">Việt Nam</td>
                                     <td class="value">1.000.000</td>
                                     <td class="used-time">1 tháng</td>
-                                    <td class="amount">1</td>
+                                    <td class="quantity">1</td>
                                     <td><p class="status status-available">Sẵn có</p></td>
                                     <td>
                                         <div class="button-check">
@@ -266,7 +266,7 @@
                                     <td class="origin">Việt Nam</td>
                                     <td class="value">1.000.000</td>
                                     <td class="used-time">1 tháng</td>
-                                    <td class="amount">1</td>
+                                    <td class="quantity">1</td>
                                     <td><p class="status status-done">Đã giao dịch</p></td>
                                     <td>
                                         <div class="button-check">
@@ -280,7 +280,7 @@
                                     <td class="origin">Việt Nam</td>
                                     <td class="value">1.000.000</td>
                                     <td class="used-time">1 tháng</td>
-                                    <td class="amount">1</td>
+                                    <td class="quantity">1</td>
                                     <td><p class="status status-pending">Đang giao dịch</p></td>
                                     <td>
                                         <div class="button-check">
@@ -294,7 +294,7 @@
                                     <td class="origin">Việt Nam</td>
                                     <td class="value">1.000.000</td>
                                     <td class="used-time">1 tháng</td>
-                                    <td class="amount">1</td>
+                                    <td class="quantity">1</td>
                                     <td><p class="status status-pending">Đang giao dịch</p></td>
                                     <td>
                                         <div class="button-check">
@@ -308,7 +308,7 @@
                                     <td class="origin">Việt Nam</td>
                                     <td class="value">1.000.000</td>
                                     <td class="used-time">1 tháng</td>
-                                    <td class="amount">1</td>
+                                    <td class="quantity">1</td>
                                     <td><p class="status status-available">Sẵn có</p></td>
                                     <td>
                                         <div class="button-check">
@@ -321,7 +321,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     <footer>
         <div class="container">
@@ -375,8 +375,8 @@
             </div>
         </div>
     </footer>
-    <script type="text/javascript" src="dest/jsmain.min.js"></script>
-    <script type="text/javascript" src="dest/main.js"></script>
+    <script type="text/javascript" src="/dest/jsmain.min.js"></script>
+    <script type="text/javascript" src="/dest/main.js"></script>
 </body>
 
 </html>
