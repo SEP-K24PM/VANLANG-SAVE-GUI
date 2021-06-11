@@ -11,16 +11,10 @@ function toggleNavigation() {
 $(logo).on("click", function () {
     toggleNavigation();
 });
+$("header .mainHeader .blacklayer").on("click", function () {
+    toggleNavigation();
+});
 
-/**
- * Data Product
- */
-let datasugg = ["NhatDuy", "Dep trai"];
-console.log(typeof datasugg);
-/**
- *
- * Data Product
- */
 $(document).ready(function () {
     if ($(".home-page").length != 0) {
     } else if ($(".market-page").length != 0) {
@@ -155,6 +149,13 @@ $(document).ready(function () {
         $(btnCheck).on("click", function () {
             $(this).toggleClass("fillColor");
             $(this).children().toggleClass("scaleNormal");
+        });
+    } else if ($(".addProduct-page").length != 0) {
+        $(".addProduct .data .btn-add").on("click", function () {
+            $(".noti").addClass("success");
+        });
+        $(".noti .close-icon").on("click", function () {
+            $(".noti").removeClass("success");
         });
     }
 });

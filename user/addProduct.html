@@ -96,45 +96,17 @@
 
 <body>
     <header>
-        <div class="mainHeader">
-            <div class="blacklayer">
-            </div>
-            <div id="burgerMenuIcon" style="opacity: 1; transform: translateY(0px);">
-                <svg width="89px" height="89px">
-                    <path d="M35,38 C39,38 41,38 45,38" fill="none" stroke-width="2px" stroke="#000000"></path>
-                    <path d="M45,38 C49,38 51,38 55,38" fill="none" stroke-width="2px" stroke="#000000"></path>
-                    <line x1="35" y1="45" x2="45" y2="45" x="0" fill="none" stroke-width="2px" stroke="#000000"></line>
-                    <line x1="45" y1="45" x2="55" y2="45" x="10" fill="none" stroke-width="2px" stroke="#000000"></line>
-                    <path d="M35,52 C39,52 41,52 45,52" fill="none" stroke-width="2px" stroke="#000000"></path>
-                    <path d="M45,52 C49,52 51,52 55,52" fill="none" stroke-width="2px" stroke="#000000"></path>
-                </svg>
-            </div>
-            <div id="sidebar">
-                <div class="logo">
-                </div>
-                <div class="signin-check">
-                    <p class="not-sigin">Have an account? <a href="/signin.html">Sign in</a></p>
-                    <p class="signed">Hi! </p> <!--Thêm tên user vào sau chữ Hi -->
-                </div>
-                <nav class="navigation">
-                    <ul>
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/market.html">Market</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Service</a></li>
-                        <li><a href="">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="colorbar" style="height: 100%; top: 0%; opacity: 1; background-color: transparent;"></div>
-                <!-- #626657 -->
-            </div>
-        </div>
+        <!-- <div class="user-header">
+
+        </div> -->
     </header>
     <main class="addProduct-page">
         <section class="bannerAddProduct">
             <div class="textboxbanner">
                 <h2>Thêm sản phẩm</h2>
-                 <p class="desc">Dive into our market spanning Clothes, Souvenir, Personal Belongings, Books, Tickets, Sports Equipments, Electronics and other categories.</p>
+            </div>
+            <div class="backtoIventory">
+                BAC
             </div>
         </section>
         <section class="addProduct">
@@ -187,11 +159,20 @@
                     </div>
                     <div class="data__item">
                         <label for="img">Hình ảnh</label>
+                        <!-- <label class="custom-file-upload"> -->
                         <input type="file" id="img" multiple="multiple" accept="image/x-png,image/jpg,image/jpeg">
+                            <!-- Tải ảnh lên -->
+                        <!-- </label> -->
                     </div>
+                    <div class="btn-add">Thêm sản phẩm</div>
                 </div>
             </div>
         </section>
+        <div class="noti">
+             <i class="bell-icon"><img src="/img/icons/alarm.svg" alt=""></i>
+            <p class="desc"><strong>Thêm thành công </strong> - Sản phẩm đã được thêm vào giỏ hàng</p>
+            <i class="close-icon"><img src="/img/icons/closebtn.svg" alt=""></i>
+        </div>
     </main>
     <footer>
         <div class="container">
