@@ -157,6 +157,52 @@ $(document).ready(function () {
         $(".noti .close-icon").on("click", function () {
             $(".noti").removeClass("success");
         });
+    } else if ($(".userProfile-page").length != 0) {
+        /**Turn a number into star rating*/
+        var starWidth = 15;
+        $.fn.stars = function () {
+            return $(this).each(function () {
+                $(this).html(
+                    $("<span />").width(
+                        Math.max(0, Math.min(5, parseFloat($(this).html()))) *
+                            starWidth
+                    )
+                );
+            });
+        };
+        $(
+            ".userProfile-page .mainProfile .mainProfile__left .mainProfile__left-wrap span.stars"
+        ).stars();
+
+        /**Showmore btn */
+        var $el, $ps, $up, totalHeight;
+
+        $(".desc-box .button").click(function () {
+            totalHeight = 0;
+
+            $el = $(this);
+            $p = $el.parent();
+            $up = $p.parent();
+            $ps = $up.find("p:not('.read-more')");
+
+            $ps.each(function () {
+                totalHeight += $(this).outerHeight();
+            });
+
+            $up.css({
+                // Set height to prevent instant jumpdown when max height is removed
+                height: $up.height(),
+                "max-height": 9999,
+            }).animate({
+                height: totalHeight,
+            });
+
+            // fade out read-more
+            $p.fadeOut();
+
+            // prevent jump-down
+            return false;
+        });
     }
 });
 
