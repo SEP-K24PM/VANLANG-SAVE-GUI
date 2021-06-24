@@ -1,6 +1,6 @@
 let logo = document.querySelector("header .mainHeader #burgerMenuIcon");
 let openHeader = document.querySelector("header .mainHeader");
-
+let btnCheck = $(".button-check");
 function toggleNavigation() {
     $("header .mainHeader").toggleClass("open");
     $("header .mainHeader .blacklayer").toggleClass("open");
@@ -20,7 +20,7 @@ $(document).ready(function () {
     } else if ($(".market-page").length != 0) {
         let suggestions = [];
         let a = document.querySelectorAll(
-            ".mainProduct .mainProduct__list .mainProduct__list-item .tittle"
+            ".mainProduct .mainProduct__list .mainProduct__list-item .title"
         );
         a.forEach((element) => {
             suggestions.push(element.textContent);
@@ -81,42 +81,24 @@ $(document).ready(function () {
             suggBox.innerHTML = listData;
         }
     } else if ($(".detailproduct-page").length != 0) {
-        let options = document.querySelector(
-            ".detailProduct .container .detail__right-options .val"
-        ).textContent;
-        const dataDisable = "trao đổi";
-        if (options.toLowerCase() === dataDisable) {
-            document
-                .querySelector(
-                    ".popupTrade .inventory .inventory__wrap .inventory__wrap-top .free"
-                )
-                .classList.add("disable");
-        }
-        let btnCheck = $(".button-check");
-        /**Inventory */
+        // let options = document.querySelector(
+        //     ".detailproduct-page .detailProduct .container .detail__right-options .val"
+        // ).textContent;
+        // const dataDisable = "trao đổi";
+        // if (options.toLowerCase() === dataDisable) {
+        //     checkOption = true;
+        // }
+    } else if ($(".register-exchange-page").length != 0) {
         $(btnCheck).on("click", function () {
             $(btnCheck).removeClass("fillColor");
             $(btnCheck).children().removeClass("scaleNormal");
             $(this).toggleClass("fillColor");
             $(this).children().toggleClass("scaleNormal");
         });
-
-        let btnDel = $(".button-control .del");
+        let btnDel = $(".button.delproduct");
         $(btnDel).on("click", function () {
             $(btnCheck).removeClass("fillColor");
             $(btnCheck).children().removeClass("scaleNormal");
-        });
-        let btnOpenDP = $(
-            ".detailproduct-page .detailProduct .container .detail__left .showUp"
-        );
-        $(btnOpenDP).on("click", function () {
-            $(".popupTrade .blacklayer").addClass("open");
-            $(".popupTrade .inventory").addClass("open");
-        });
-        let btnCloseDP = $(".popupTrade .inventory__close");
-        $(btnCloseDP).on("click", function () {
-            $(".popupTrade .blacklayer").removeClass("open");
-            $(".popupTrade .inventory").removeClass("open");
         });
     } else if ($(".signin-page").length != 0) {
         const loginForm = document.querySelector(".signin-form");
@@ -131,20 +113,6 @@ $(document).ready(function () {
                 : inputPassword.setAttribute("type", "password");
         });
     } else if ($(".inventory-page").length != 0) {
-        $(".inventory .searchWrap .search-input input").on(
-            "keyup",
-            function () {
-                var value = $(this).val().toLowerCase();
-                $(
-                    ".tableIven .inventory .inventory__wrap-bottom table tbody tr"
-                ).filter(function () {
-                    $(this).toggle(
-                        $(this).text().toLowerCase().indexOf(value) > -1
-                    );
-                });
-            }
-        );
-        let btnCheck = $(".button-check");
         /**Inventory */
         $(btnCheck).on("click", function () {
             $(this).toggleClass("fillColor");
@@ -173,35 +141,91 @@ $(document).ready(function () {
         $(
             ".userProfile-page .mainProfile .mainProfile__left .mainProfile__left-wrap span.stars"
         ).stars();
+        $(
+            ".userProfile-page .mainProfile .mainProfile__right-list-review span.stars"
+        ).stars();
+        /** SHOW MORE TEXT*/
+        if ($(".desc-box .short-desc").height() < 55) {
+            $(".desc-box .read-more").addClass("disable");
+        } else {
+            /**Showmore btn */
+            var $el, $ps, $up, totalHeight;
 
-        /**Showmore btn */
-        var $el, $ps, $up, totalHeight;
+            $(".desc-box .button").click(function () {
+                totalHeight = 0;
 
-        $(".desc-box .button").click(function () {
-            totalHeight = 0;
+                $el = $(this);
+                $p = $el.parent();
+                $up = $p.parent();
+                $ps = $up.find("p:not('.read-more')");
 
-            $el = $(this);
-            $p = $el.parent();
-            $up = $p.parent();
-            $ps = $up.find("p:not('.read-more')");
+                $ps.each(function () {
+                    totalHeight += $(this).outerHeight();
+                });
 
-            $ps.each(function () {
-                totalHeight += $(this).outerHeight();
+                $up.css({
+                    // Set height to prevent instant jumpdown when max height is removed
+                    height: $up.height(),
+                    "max-height": 9999,
+                }).animate({
+                    height: totalHeight,
+                });
+
+                // fade out read-more
+                $p.fadeOut();
+
+                // prevent jump-down
+                return false;
             });
+        }
+        $(".cmt-box .cmt-content").each(function (index, element) {
+            if ($(element).height() < 40) {
+                $(element)
+                    .closest(".cmt-box")
+                    .find(".read-more")
+                    .addClass("disable");
+            } else {
+                /**Showmore btn */
+                var $el, $ps, $up, totalHeight;
+                $(".cmt-box .button").click(function () {
+                    totalHeight = 0;
 
-            $up.css({
-                // Set height to prevent instant jumpdown when max height is removed
-                height: $up.height(),
-                "max-height": 9999,
-            }).animate({
-                height: totalHeight,
-            });
+                    $el = $(this);
+                    $p = $el.parent();
+                    $up = $p.parent();
+                    $ps = $up.find("p:not('.read-more')");
 
-            // fade out read-more
-            $p.fadeOut();
+                    $ps.each(function () {
+                        totalHeight += $(this).outerHeight();
+                    });
 
-            // prevent jump-down
-            return false;
+                    $up.css({
+                        // Set height to prevent instant jumpdown when max height is removed
+                        height: $up.height(),
+                        "max-height": 9999,
+                    }).animate({
+                        height: totalHeight,
+                    });
+
+                    // fade out read-more
+                    $p.fadeOut();
+
+                    // prevent jump-down
+                    return false;
+                });
+            }
+        });
+        /** TAB ACTIVE */
+        let panel = $(".panel");
+        $(document).on("click", ".tag-list .button-primary", function (e) {
+            e.preventDefault();
+            panel.hide();
+            // $(".tag-list .button-primary").removeClass("active");
+            // panel.eq($(this).index()).addClass("active");
+            // $(this).addClass("active");
+            $(".tag-list .button-primary").removeClass("active");
+            panel.eq($(this).index()).show();
+            $(this).addClass("active");
         });
     }
 });
@@ -265,4 +289,13 @@ $(
     ".detailproduct-page .anotherProduct .container .product__button .btn.next"
 ).on("click", function () {
     $anotherProduct.flickity("next");
+});
+
+$(".searchWrap .search-input input").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $(".tableIven .inventory .inventory__wrap-bottom table tbody tr").filter(
+        function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        }
+    );
 });
