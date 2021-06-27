@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Grunt</title>
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="">
     <meta name="title" content="" />
     <meta name="description" content="" />
     <!-- meta facebook -->
@@ -98,40 +98,6 @@
 
 <body>
     <header>
-        <div class="mainHeader">
-            <div class="blacklayer">
-            </div>
-            <div id="burgerMenuIcon" style="opacity: 1; transform: translateY(0px);">
-                <svg width="89px" height="89px">
-                    <path d="M35,38 C39,38 41,38 45,38" fill="none" stroke-width="2px" stroke="#000000"></path>
-                    <path d="M45,38 C49,38 51,38 55,38" fill="none" stroke-width="2px" stroke="#000000"></path>
-                    <line x1="35" y1="45" x2="45" y2="45" x="0" fill="none" stroke-width="2px" stroke="#000000"></line>
-                    <line x1="45" y1="45" x2="55" y2="45" x="10" fill="none" stroke-width="2px" stroke="#000000"></line>
-                    <path d="M35,52 C39,52 41,52 45,52" fill="none" stroke-width="2px" stroke="#000000"></path>
-                    <path d="M45,52 C49,52 51,52 55,52" fill="none" stroke-width="2px" stroke="#000000"></path>
-                </svg>
-            </div>
-            <div id="sidebar">
-                <div class="logo">
-                </div>
-                <div class="signin-check">
-                    <p class="not-sigin">Have an account? <a href="/signin.html">Sign in</a></p>
-                    <p class="signed">Hi! </p>
-                    <!--Thêm tên user vào sau chữ Hi -->
-                </div>
-                <nav class="navigation">
-                    <ul>
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/market.html">Market</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Service</a></li>
-                        <li><a href="">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="colorbar" style="height: 100%; top: 0%; opacity: 1; background-color: transparent;"></div>
-                <!-- #626657 -->
-            </div>
-        </div>
     </header>
     <main class="userAccount-edit-page">
         <section class="bannerAccount">
@@ -139,80 +105,57 @@
                 <h2>Tài khoản</h2>
             </div>
         </section>
-        <section class="table-content">
-            <div class="container">
-                <h3>Thông tin tài khoản</h3>
-                <div class="table-content wrap">
-                    <div class="table-content wrap tag">
+        <section class="tableContent">
+            <div class="containerAccount">
+                <div class="tableContent__title">
+                    <div class="tableContent__title-user">
+                        <div class="avt">
+                            <img src="/img/rose-10.jpg" alt="">
+                        </div>
+                        <div class="name">
+                            <p>Tài khoản của</p>
+                            <!--tên user-->
+                            <p class="val">Ngo Quang Nhat Duy</p>
+                        </div>
+                    </div>
+                    <div class="tableContent__title-current">
+                        <a href="/user/account/edit.html"><h3>Thông tin tài khoản</h3></a>
+                    </div>
+                </div>
+                <div class="tableContent__wrap">
+                    <div class="tableContent__wrap-tag">
                         <ul>
-                            <li><a href="">Thông tin tài khoản</a></li>
+                            <li><a href="/user/account/edit.html" class="active">Thông tin tài khoản</a></li>
                             <li><a href="">Thông báo của tôi</a></li>
-                            <li><a href="">Quản lý kho đồ</a></li>
-                            <li><a href="">Lịch sử giao dịch</a></li>
+                            <li><a href="/user/account/inventory.html">Quản lý kho đồ</a></li>
+                            <li><a href="/user/account/history.html">Lịch sử giao dịch</a></li>
                             <li><a href="">Quản lý đánh giá</a></li>
                         </ul>
                     </div>
-                    <div class="table-content wrap content">
-                        <div class="table-content wrap content tttk">
+                    <div class="tableContent__wrap-content">
+                        <div class="tableContent__wrap-content--tttk">
                             <div class="data">
                                 <div class="data__item">
                                     <label for="name">Họ tên</label>
-
-                                    <input type="text" id="name" />
+                                    <input type="text" id="name" value="Ngo Quang Nhat Duy" disabled="disabled"/>
                                 </div>
                                 <div class="data__item">
                                     <label for="phone">Số điện thoại</label>
-
-                                    <input type="tel" id="phone" />
-                                </div>
-                                <div class="data__item">
-                                    <label for="category">Thể loại</label>
-
-                                    <select id="category">
-                                        <option selected disabled>Chọn thể loại.. </option>
-                                        <option value="1">Quần áo</option>
-                                        <option value="2">Trang sức</option>
-                                        <option value="3">Đồ dùng cá nhân</option>
-                                        <option value="4">Tài liệu học</option>
-                                        <option value="5">Sách</option>
-                                        <option value="6">Vé</option>
-                                        <option value="7">Dụng cụ thể thao</option>
-                                        <option value="8">Đồ điện tử</option>
-                                        <option value="9">Đồ lưu niệm</option>
-                                        <option value="10">Thể loại khác</option>
-                                    </select>
+                                    <input type="tel" id="phone"/>
                                 </div>
                                 <div class="data__item">
                                     <label for="email">Email</label>
+                                    <input type="email" id="email" value="duy.187it06776@vanlanguni.vn" disabled="disabled"/>
+                                </div>
+                                <div class="data__item">
+                                    <label for="gender">Giới tính</label>
+                                    <input type="text" id="gender" value="Nam" disabled="disabled"/>
 
-                                    <input type="email" id="email" />
                                 </div>
                                 <div class="data__item">
-                                    <p class="gender">Giới tính</p>
-                                      <input type="radio" id="male" value="male">
-                                      <label for="male">Nam</label>
-                                    <input type="radio" id="female" value="female">
-                                      <label for="female">Nữ</label>
-                                    <input type="radio" id="othergender" value="othergender">
-                                      <label for="othergender">Khác</label>
+                                    <label></label>
+                                    <button type="submit" class="btn-submit">Cập nhật</button>
                                 </div>
-                                <div class="data__item">
-                                    <label for="value">Giá trị</label>
-                                    <input type="text" id="value" />
-                                </div>
-                                <div class="data__item">
-                                    <label for="short-desc">Mô tả ngắn</label>
-                                    <textarea rows="5" type="text" id="short-desc" /></textarea>
-                                </div>
-                                <div class="data__item">
-                                    <label for="img">Hình ảnh</label>
-                                    <!-- <label class="custom-file-upload"> -->
-                                    <input type="file" id="img" multiple="multiple"
-                                        accept="image/x-png,image/jpg,image/jpeg">
-                                    <!-- Tải ảnh lên -->
-                                    <!-- </label> -->
-                                </div>
-                                <div class="btn-add">Thêm sản phẩm</div>
                             </div>
                         </div>
                     </div>
@@ -233,7 +176,7 @@
                         <a href="">Press</a>
                     </li>
                 </ul>
-                <div class="logoimg"><img src="img/icons/10.svg" alt=""></div>
+                <div class="logoimg"><img src="/img/icons/10.svg" alt=""></div>
             </div>
             <div class="bottomWrap">
                 <p class="textWrap">

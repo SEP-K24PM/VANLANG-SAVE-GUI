@@ -112,7 +112,7 @@ $(document).ready(function () {
                 ? inputPassword.setAttribute("type", "text")
                 : inputPassword.setAttribute("type", "password");
         });
-    } else if ($(".inventory-page").length != 0) {
+    } else if ($(".userAccount-inventory-page").length != 0) {
         /**Inventory */
         $(btnCheck).on("click", function () {
             $(this).toggleClass("fillColor");
@@ -227,6 +227,60 @@ $(document).ready(function () {
             panel.eq($(this).index()).show();
             $(this).addClass("active");
         });
+    } else if ($(".userAccount-history-page").length != 0) {
+        $(".comment-wrap .button-primary.comment").on("click", function (e) {
+            e.preventDefault();
+            $(".comment-wrap .comment-box").removeClass("active");
+            $(this).parent().find(".comment-box").addClass("active");
+        });
+        $(".comment-wrap .comment-box .button-primary.sendComment").on(
+            "click",
+            function (e) {
+                e.preventDefault();
+                $(this).parent().removeClass("active");
+            }
+        );
+        // $(".cmt-box .cmt-content").each(function (index, element) {
+        //     if ($(element).height() < 40) {
+        //         $(element)
+        //             .closest(".cmt-box")
+        //             .find(".read-more")
+        //             .addClass("disable");
+        //     } else {
+        //         /**Showmore btn */
+        //         var $el, $ps, $up, totalHeight;
+        //         $(".cmt-box .button").click(function () {
+        //             totalHeight = 0;
+
+        //             $el = $(this);
+        //             $p = $el.parent();
+        //             $up = $p.parent();
+        //             $ps = $up.find("p:not('.read-more')");
+
+        //             $ps.each(function () {
+        //                 totalHeight += $(this).outerHeight();
+        //             });
+
+        //             $up.css({
+        //                 // Set height to prevent instant jumpdown when max height is removed
+        //                 height: $up.height(),
+        //                 "max-height": 9999,
+        //             }).animate({
+        //                 height: totalHeight,
+        //             });
+
+        //             // fade out read-more
+        //             $p.fadeOut();
+
+        //             // prevent jump-down
+        //             return false;
+        //         });
+        //     }
+        // });
+        // $(".comment-wrap .button-primary.comment").each(function(index, element){
+        //     e.preventDefault();
+        //     $(this)
+        // })
     }
 });
 
@@ -293,9 +347,7 @@ $(
 
 $(".searchWrap .search-input input").on("keyup", function () {
     var value = $(this).val().toLowerCase();
-    $(".tableIven .inventory .inventory__wrap-bottom table tbody tr").filter(
-        function () {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-        }
-    );
+    $(".inventory .inventory__wrap-bottom table tbody tr").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
 });
