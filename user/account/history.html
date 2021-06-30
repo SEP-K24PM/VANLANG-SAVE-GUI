@@ -126,7 +126,7 @@
                             <li><a href="/user/account/edit.html">Thông tin tài khoản</a></li>
                             <li><a href="">Thông báo của tôi</a></li>
                             <li><a href="/user/account/inventory.html">Quản lý kho đồ</a></li>
-                            <li><a href="/user/account/history.html" class="active">Lịch sử giao dịch</a></li>
+                            <li><a href="/user/account/history.html" class="active">Tất cả giao dịch</a></li>
                             <li><a href="">Quản lý đánh giá</a></li>
                         </ul>
                     </div>
@@ -191,7 +191,46 @@
                                                     </td>
                                                     <td class="type">Đồ lưu niệm</td>
                                                     <td class="quantity">1</td>
-                                                    <td><p class="status status-success">Thành công</p></td>
+                                                    <td><p class="status status-done">Hoàn tất</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="name">
+                                                        <div class="img"><img src="/img/027e5893146889.5e5d8a484f5c4.jpg" alt=""></div>
+                                                        <div class="wrap-info">
+                                                            <!--Tên món đồ-->
+                                                            <a href="" class="name-prod">Hộp nhạc kỉ niệm tình iu chúng ta</a>
+                                                            <p>Trao đổi với</p>
+                                                            <!--Tên và đường dẫn profile người dùng-->
+                                                            <a class="profile" href="/user/profile.html">Park Chaeyoung</a>
+                                                            <div class="comment-wrap">
+                                                                <a href="" class="button-primary comment"><p>Viết nhận xét</p></a>
+                                                                <div class="comment-box">
+                                                                    <form action="">
+         <!--Thêm id món đồ vào sau từng id và for để chức năng đánh giá hoạt động được. Ví dụ
+                id="star-5-2", for="star-5-2" - ID(món đồ): 001 => id="star-5-2-001" for="star-5-2-001" -->
+                                                                        <input class="star star-5" id="star-5-2" type="radio" name="star"/>
+                                                                        <label class="star star-5" for="star-5-2"><span class="star-empty"></span></label>
+                                                                        <input class="star star-4" id="star-4-2" type="radio" name="star"/>
+                                                                        <label class="star star-4" for="star-4-2"><span class="star-empty"></label>
+                                                                        <input class="star star-3" id="star-3-2" type="radio" name="star"/>
+                                                                        <label class="star star-3" for="star-3-2"><span class="star-empty"></label>
+                                                                        <input class="star star-2" id="star-2-2" type="radio" name="star"/>
+                                                                        <label class="star star-2" for="star-2-2"><span class="star-empty"></label>
+                                                                        <input class="star star-1" id="star-1-2" type="radio" name="star"/>
+                                                                        <label class="star star-1" for="star-1-2"><span class="star-empty"></label>
+                                                                        <div class="rev-box">
+                                                                          <textarea class="review" col="30" name="review"></textarea>
+                                                                          <label class="review" for="review">Viết đánh giá</label>
+                                                                        </div>
+                                                                      </form>
+                                                                      <a href="" class="button-primary sendComment"><p>Gửi</p></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="type">Đồ lưu niệm</td>
+                                                    <td class="quantity">1</td>
+                                                    <td><p class="status status-cancel">Hủy</p></td>
                                                 </tr>
                                             </tbody>
                                           </table>

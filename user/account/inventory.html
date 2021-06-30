@@ -126,7 +126,7 @@
                             <li><a href="/user/account/edit.html">Thông tin tài khoản</a></li>
                             <li><a href="">Thông báo của tôi</a></li>
                             <li><a href="/user/account/inventory.html" class="active">Quản lý kho đồ</a></li>
-                            <li><a href="/user/account/history.html">Lịch sử giao dịch</a></li>
+                            <li><a href="/user/account/history.html">Tất cả giao dịch</a></li>
                             <li><a href="">Quản lý đánh giá</a></li>
                         </ul>
                     </div>
@@ -149,12 +149,12 @@
                                                     <img src="/img/icons/closebtn.svg" alt="">
                                                 </div>
                                             </a>
-                                            <div class="button delproduct">
-                                                <p>Xóa sản phẩm</p>
+                                            <a href="/user/account/addPost.html" class="button creatpost">
+                                                <p>Tạo bài đăng</p>
                                                 <div class="img">
-                                                    <img src="/img/icons/closebtn.svg" alt="">
+                                                    <img src="/img/icons/post.svg" alt="">
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="inventory__wrap-bottom">
@@ -168,7 +168,7 @@
                                                 <th>TGSD</th>
                                                 <th>Số lượng</th>
                                                 <th>Trạng thái</th>
-                                                <th>Lựa chọn</th>
+                                                <th>Xóa</th>
                                               </tr>
                                             </thead>
                                             <tbody class="body-half-screen">
@@ -181,8 +181,8 @@
                                                     <td class="quantity">1</td>
                                                     <td><p class="status status-available">Sẵn có</p></td>
                                                     <td>
-                                                        <div class="button-check">
-                                                            <div class="check"></div>
+                                                        <div class="button-del">
+                                                            <span class="del"></span>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -195,8 +195,8 @@
                                                     <td class="quantity">1</td>
                                                     <td><p class="status status-done">Đã giao dịch</p></td>
                                                     <td>
-                                                        <div class="button-check">
-                                                            <div class="check"></div>
+                                                        <div class="button-del">
+                                                            <span class="del"></span>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -209,8 +209,8 @@
                                                     <td class="quantity">1</td>
                                                     <td><p class="status status-pending">Đang giao dịch</p></td>
                                                     <td>
-                                                        <div class="button-check">
-                                                            <div class="check"></div>
+                                                        <div class="button-del">
+                                                            <span class="del"></span>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -223,8 +223,8 @@
                                                     <td class="quantity">1</td>
                                                     <td><p class="status status-pending">Đang giao dịch</p></td>
                                                     <td>
-                                                        <div class="button-check">
-                                                            <div class="check"></div>
+                                                        <div class="button-del">
+                                                            <span class="del"></span>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -237,8 +237,8 @@
                                                     <td class="quantity">1</td>
                                                     <td><p class="status status-available">Sẵn có</p></td>
                                                     <td>
-                                                        <div class="button-check">
-                                                            <div class="check"></div>
+                                                        <div class="button-del">
+                                                            <span class="del"></span>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -251,8 +251,8 @@
                                                     <td class="quantity">1</td>
                                                     <td><p class="status status-available">Sẵn có</p></td>
                                                     <td>
-                                                        <div class="button-check">
-                                                            <div class="check"></div>
+                                                        <div class="button-del">
+                                                            <span class="del"></span>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -265,8 +265,8 @@
                                                     <td class="quantity">1</td>
                                                     <td><p class="status status-done">Đã giao dịch</p></td>
                                                     <td>
-                                                        <div class="button-check">
-                                                            <div class="check"></div>
+                                                        <div class="button-del">
+                                                            <span class="del"></span>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -279,8 +279,8 @@
                                                     <td class="quantity">1</td>
                                                     <td><p class="status status-pending">Đang giao dịch</p></td>
                                                     <td>
-                                                        <div class="button-check">
-                                                            <div class="check"></div>
+                                                        <div class="button-del">
+                                                            <span class="del"></span>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -293,8 +293,8 @@
                                                     <td class="quantity">1</td>
                                                     <td><p class="status status-pending">Đang giao dịch</p></td>
                                                     <td>
-                                                        <div class="button-check">
-                                                            <div class="check"></div>
+                                                        <div class="button-del">
+                                                            <span class="del"></span>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -307,8 +307,8 @@
                                                     <td class="quantity">1</td>
                                                     <td><p class="status status-available">Sẵn có</p></td>
                                                     <td>
-                                                        <div class="button-check">
-                                                            <div class="check"></div>
+                                                        <div class="button-del">
+                                                            <span class="del"></span>
                                                         </div>
                                                     </td>
                                                 </tr>
