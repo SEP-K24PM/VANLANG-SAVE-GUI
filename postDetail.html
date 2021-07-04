@@ -112,11 +112,10 @@
             </div>
         </div>
     </header>
-    <main class="detailproduct-page">
-        <section class="detailProduct">
+    <main class="postdetail-page">
+        <section class="postDetail">
             <div class="container">
                 <div class="detail__left">
-                    <div class="detail__left-valimg"><span>1</span>/5</div>
                     <div class="detail__left-slider" itemscope data-pswp-uid ="1">
                         <figure class="detail__left-slider-item" >
                                 <div class="img"><img src="img/detail/detail1.1.jpg" alt=""></div>
@@ -165,43 +164,104 @@
                     </div>
                 </div>
                 <div class="detail__right">
-                    <div class="detail__right-name">Park Chaeyoung - FIRST SINGLE ALBUM</div>
-                    <div class="detail__right-options">
-                        <p class="properties">Lựa chọn</p>
-                        <p class="val">Trao đổi</p>
-                    </div>
-                    <div class="detail__right-another">
-                        <ul>
+                    <form action="">
+                        <button type="submit" class="buttonsubmit edit">
+                            <span class="edit"></span>
+                        </button>
+                        <button type="submit" class="buttonsubmit save">
+                            <span class="edit"></span>
+                        </button>
+                        <div class="detail__right-name">
+                            <h3>Park Chaeyoung - FIRST SINGLE ALBUM</h3>
+                            <div class="data-edit">
+                                <textarea rows="3" type="text" id="title"/>Park Chaeyoung - FIRST SINGLE ALBUM</textarea>
+                            </div>
+                        </div>
+                        <div class="detail__right-options">
+                            <p class="properties">Lựa chọn</p>
+                            <p class="val">Trao đổi</p>
+                        <div class="data-edit">
+                            <select id="option">
+                                <option selected disabled>... </option>
+                                <option value="1" selected>Trao đổi</option>
+                                <option value="2">Đổi free</option>
+                            </select>
+                        </div>
+                        </div>
+                        <div class="detail__right-another">
+                            <ul>
                             <li>
                                 <p class="properties">Thể loại</p>
                                 <p class="val">CD</p>
+                                <div class="data-edit">
+                                    <select id="category">
+                                        <option selected disabled>Chọn thể loại.. </option>
+                                        <option value="1" selected>CD</option>
+                                        <option value="2">Trang sức</option>
+                                        <option value="3">Đồ dùng cá nhân</option>
+                                        <option value="4">Tài liệu học</option>
+                                        <option value="5">Sách</option>
+                                        <option value="6">Vé</option>
+                                        <option value="7">Dụng cụ thể thao</option>
+                                        <option value="8">Đồ điện tử</option>
+                                        <option value="9">Đồ lưu niệm</option>
+                                        <option value="10">Thể loại khác</option>
+                                    </select>
+                                </div>
                             </li>
                             <li>
                                 <p class="properties">Số lượng</p>
                                 <p class="val">1</p>
+                                <div class="data-edit">
+                                    <input type="number" id="quantity" min="1" max="50" value="1"/>
+                                </div>
                             </li>
                             <li>
                                 <p class="properties">Xuất xứ</p>
                                 <p class="val">Hàn Quốc</p>
+                                <div class="data-edit">
+                                    <input type="text" id="origin" value="Hàn Quốc"/>
+                                </div>
                             </li>
                             <li>
                                 <p class="properties">Giá trị</p>
                                 <p class="val">₫500.000</p>
+                                <div class="data-edit">
+                                    <input type="text" id="price" value="₫500.000"/>
+                                </div>
                             </li>
                             <li>
                                 <p class="properties">Thời gian sử dụng</p>
                                 <p class="val">3 tháng</p>
+                                <div class="data-edit">
+                                    <input type="text" id="timeused" value="3 tháng"/>
+                                </div>
                             </li>
                             <li>
                                 <p class="properties">Trạng thái</p>
-                                <p class="status status-done">Đã giao dịch</p>
+                                <div class="val">
+                                    <p class="status status-done">Hoàn tất</p>
+                                </div>
+                                <div class="data-edit">
+                                    <select id="status">
+                                        <option selected disabled>Chọn trạng thái..</option>
+                                        <option value="1" selected>Hoàn tất</option>
+                                        <option value="2">Hủy</option>
+                                        <option value="3">Đóng</option>
+                                        <option value="4">Mở</option>
+                                    </select>
+                                </div>
                             </li>
-                        </ul>
-                    </div>
-                    <div class="detail__right-desc">
+                            </ul>
+                        </div>
+                        <div class="detail__right-desc">
                         <p class="title">Mô tả ngắn:</p>
-                        <p class="content">This is a small-scale producer still breaking into the market, so we were looking for a fresh approach that would boost their visibility and improve brand recognition.</p>
-                    </div>
+                        <p class="content edit">This is a small-scale producer still breaking into the market, so we were looking for a fresh approach that would boost their visibility and improve brand recognition.</p>
+                        <div class="data-edit">
+                            <textarea rows="5" type="text" id="short-desc"/>This is a small-scale producer still breaking into the market, so we were looking for a fresh approach that would boost their visibility and improve brand recognition.</textarea>
+                        </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -210,7 +270,7 @@
                 <h3 class="titleAP">Các sản phẩm khác</h3>
                 <div class="mainProduct__list">
                     <div class="mainProduct__list-item">
-                        <a href="/productDetail.html">
+                        <a href="/postDetail.html">
                             <div class="item-img">
                                 <!--Ảnh sản phẩm-->
                                 <img src="/img/detail/detail1.1.jpg" alt="">
@@ -263,7 +323,7 @@
                         </a>
                     </div>
                     <div class="mainProduct__list-item">
-                        <a href="/productDetail.html">
+                        <a href="/postDetail.html">
                             <div class="item-img">
                                 <!--Ảnh sản phẩm-->
                                 <img src="/img/detail/detail1.1.jpg" alt="">
@@ -316,7 +376,7 @@
                         </a>
                     </div>
                     <div class="mainProduct__list-item">
-                        <a href="/productDetail.html">
+                        <a href="/postDetail.html">
                             <div class="item-img">
                                 <!--Ảnh sản phẩm-->
                                 <img src="/img/detail/detail1.1.jpg" alt="">
@@ -369,7 +429,7 @@
                         </a>
                     </div>
                     <div class="mainProduct__list-item">
-                        <a href="/productDetail.html">
+                        <a href="/postDetail.html">
                             <div class="item-img">
                                 <!--Ảnh sản phẩm-->
                                 <img src="/img/detail/detail1.1.jpg" alt="">
@@ -422,7 +482,7 @@
                         </a>
                     </div>
                     <div class="mainProduct__list-item">
-                        <a href="/productDetail.html">
+                        <a href="/postDetail.html">
                             <div class="item-img">
                                 <!--Ảnh sản phẩm-->
                                 <img src="/img/detail/detail1.1.jpg" alt="">
@@ -475,7 +535,7 @@
                         </a>
                     </div>
                     <div class="mainProduct__list-item">
-                        <a href="/productDetail.html">
+                        <a href="/postDetail.html">
                             <div class="item-img">
                                 <!--Ảnh sản phẩm-->
                                 <img src="/img/detail/detail1.1.jpg" alt="">
@@ -528,7 +588,7 @@
                         </a>
                     </div>
                     <div class="mainProduct__list-item">
-                        <a href="/productDetail.html">
+                        <a href="/postDetail.html">
                             <div class="item-img">
                                 <!--Ảnh sản phẩm-->
                                 <img src="/img/detail/detail1.1.jpg" alt="">
@@ -581,7 +641,7 @@
                         </a>
                     </div>
                     <div class="mainProduct__list-item">
-                        <a href="/productDetail.html">
+                        <a href="/postDetail.html">
                             <div class="item-img">
                                 <!--Ảnh sản phẩm-->
                                 <img src="/img/detail/detail1.1.jpg" alt="">
@@ -634,7 +694,7 @@
                         </a>
                     </div>
                     <div class="mainProduct__list-item">
-                        <a href="/productDetail.html">
+                        <a href="/postDetail.html">
                             <div class="item-img">
                                 <!--Ảnh sản phẩm-->
                                 <img src="/img/detail/detail1.1.jpg" alt="">
