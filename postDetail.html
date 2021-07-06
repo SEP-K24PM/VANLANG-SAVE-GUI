@@ -138,7 +138,8 @@
                             <div class="btn prev"><img src="img/icons/prev.svg" alt=""></div>
                             <div class="btn next "><img src="img/icons/next.svg" alt=""></div>
                         </div>
-                        <div class="showUp">Đổi ngay!</div>
+                        <a href="/registerExchange.html" class="option tradebtn">Đổi ngay!</a>
+                        <button type="submit" class="option freebtn">Đổi free!</button>
                     </div>
                     <div class="detail__left-userinfo">
                         <div class="right">
@@ -165,12 +166,19 @@
                 </div>
                 <div class="detail__right">
                     <form action="">
-                        <button type="submit" class="buttonsubmit edit">
-                            <span class="edit"></span>
+                        <button class="button-threedots">
+                            <div class="threedots"></div>
                         </button>
-                        <button type="submit" class="buttonsubmit save">
+                        <div class="navi-post">
+                            <ul>
+                                <li><button class="edit">Cập nhật</button></li>
+                                <li><button type="submit" class="save">Lưu</button></li>
+                                <li><button type="submit" class="del">Xóa</button></li>
+                            </ul>
+                        </div>
+                        <!-- <button type="submit" class="buttonsubmit save">
                             <span class="edit"></span>
-                        </button>
+                        </button> -->
                         <div class="detail__right-name">
                             <h3>Park Chaeyoung - FIRST SINGLE ALBUM</h3>
                             <div class="data-edit">
@@ -262,6 +270,194 @@
                         </div>
                         </div>
                     </form>
+                </div>
+            </div>
+            <div class="checkregist">
+                <div class="container">
+                    <button type="submit" class="button-del">
+                        <div class="del"></div>
+                    </button>
+                    <div class="inventory">
+                        <div class="inventory__wrap">
+                            <div class="inventory__wrap-bottom">
+                                <table class="table-scroll small-first-col">
+                                    <thead>
+                                      <tr>
+                                          <th>Đăng ký</th>
+                                          <th>Thông tin món đồ</th>
+                                          <th class="option">Đổi</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody class="body-half-screen">
+                                        <tr>
+                                            <td class="name">
+                                                <div class="img"><img src="/img/027e5893146889.5e5d8a484f5c4.jpg" alt=""></div>
+                                                <div class="wrap-info">
+                                                    <!--Tên món đồ-->
+                                                    <a href="" class="name-prod">Hộp nhạc kỉ niệm tình iu chúng ta</a>
+                                                    <p>Đề xuất đổi bởi: </p>
+                                                    <!--Tên và đường dẫn profile người dùng-->
+                                                    <a class="profile" href="/user/profile.html">Park Chaeyoung</a
+                                                </div>
+                                            </td>
+                                            <td class="info">
+                                                <div class="infotop">
+                                                    <div class="infotop__left">
+                                                        <div class="infotop__left-item">
+                                                            <p class="properties">Thể loại:</p>
+                                                            <p class="val">Đồ lưu niệm</p>
+                                                        </div>
+                                                        <div class="infotop__left-item">
+                                                            <p class="properties">Số lượng:</p>
+                                                            <p class="val">1</p>
+                                                        </div>
+                                                        <div class="infotop__left-item">
+                                                            <p class="properties">Xuất xứ:</p>
+                                                            <p class="val">Việt Nam</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="infotop__right">
+                                                        <div class="infotop__right-item">
+                                                            <p class="properties">Giá trị:</p>
+                                                            <p class="val">₫500.000</p>
+                                                        </div>
+                                                        <div class="infotop__right-item">
+                                                            <p class="properties">TGSD:</p>
+                                                            <p class="val">5 tháng</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="infobot">
+                                                    <p class="properties">Lời nhắn:</p>
+                                                    <div class="cmt-box">
+                                                        <!--loi nhan-->
+                                                        <p class="cmt-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        </p>
+                                                        <p class="read-more"><a href="#" class="button">Đọc tiếp</a></p>
+                                                      </div>
+                                                </div>
+                                            </td>
+                                            <td class="option">
+                                                <button type="submit" class="button-check">
+                                                    <div class="check"></div>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="name">
+                                                <div class="img"><img src="/img/027e5893146889.5e5d8a484f5c4.jpg" alt=""></div>
+                                                <div class="wrap-info">
+                                                    <!--Tên món đồ-->
+                                                    <a href="" class="name-prod">Hộp nhạc kỉ niệm tình iu chúng ta</a>
+                                                    <p>Đề xuất đổi bởi: </p>
+                                                    <!--Tên và đường dẫn profile người dùng-->
+                                                    <a class="profile" href="/user/profile.html">Park Chaeyoung</a
+                                                </div>
+                                            </td>
+                                            <td class="info">
+                                                <div class="infotop">
+                                                    <div class="infotop__left">
+                                                        <div class="infotop__left-item">
+                                                            <p class="properties">Thể loại:</p>
+                                                            <p class="val">Đồ lưu niệm</p>
+                                                        </div>
+                                                        <div class="infotop__left-item">
+                                                            <p class="properties">Số lượng:</p>
+                                                            <p class="val">1</p>
+                                                        </div>
+                                                        <div class="infotop__left-item">
+                                                            <p class="properties">Xuất xứ:</p>
+                                                            <p class="val">Việt Nam</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="infotop__right">
+                                                        <div class="infotop__right-item">
+                                                            <p class="properties">Giá trị:</p>
+                                                            <p class="val">₫500.000</p>
+                                                        </div>
+                                                        <div class="infotop__right-item">
+                                                            <p class="properties">TGSD:</p>
+                                                            <p class="val">5 tháng</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="infobot">
+                                                    <p class="properties">Lời nhắn:</p>
+                                                    <div class="cmt-box">
+                                                        <!--loi nhan-->
+                                                        <p class="cmt-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. At similique repellendus iure placeat excepturi tempore enim sapiente corrupti laborum alias a, dicta voluptas perferendis repellat quod. Illum sapiente voluptate ut.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At similique repellendus iure placeat excepturi tempore enim sapiente corrupti laborum alias a, dicta voluptas perferendis repellat quod. Illum sapiente voluptate ut.
+                                                        </p>
+                                                        <p class="read-more"><a href="#" class="button">Đọc tiếp</a></p>
+                                                      </div>
+                                                </div>
+                                            </td>
+                                            <td class="option">
+                                                <button type="submit" class="button-check">
+                                                    <div class="check"></div>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="name">
+                                                <div class="img"><img src="/img/027e5893146889.5e5d8a484f5c4.jpg" alt=""></div>
+                                                <div class="wrap-info">
+                                                    <!--Tên món đồ-->
+                                                    <a href="" class="name-prod">Hộp nhạc kỉ niệm tình iu chúng ta</a>
+                                                    <p>Đề xuất đổi bởi: </p>
+                                                    <!--Tên và đường dẫn profile người dùng-->
+                                                    <a class="profile" href="/user/profile.html">Park Chaeyoung</a
+                                                </div>
+                                            </td>
+                                            <td class="info">
+                                                <div class="infotop">
+                                                    <div class="infotop__left">
+                                                        <div class="infotop__left-item">
+                                                            <p class="properties">Thể loại:</p>
+                                                            <p class="val">Đồ lưu niệm</p>
+                                                        </div>
+                                                        <div class="infotop__left-item">
+                                                            <p class="properties">Số lượng:</p>
+                                                            <p class="val">1</p>
+                                                        </div>
+                                                        <div class="infotop__left-item">
+                                                            <p class="properties">Xuất xứ:</p>
+                                                            <p class="val">Việt Nam</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="infotop__right">
+                                                        <div class="infotop__right-item">
+                                                            <p class="properties">Giá trị:</p>
+                                                            <p class="val">₫500.000</p>
+                                                        </div>
+                                                        <div class="infotop__right-item">
+                                                            <p class="properties">TGSD:</p>
+                                                            <p class="val">5 tháng</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="infobot">
+                                                    <p class="properties">Lời nhắn:</p>
+                                                    <div class="cmt-box">
+                                                        <!--loi nhan-->
+                                                        <p class="cmt-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. At similique repellendus iure placeat excepturi tempore enim sapiente corrupti laborum alias a, dicta voluptas perferendis repellat quod. Illum sapiente voluptate ut.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At similique repellendus iure placeat excepturi tempore enim sapiente corrupti laborum alias a, dicta voluptas perferendis repellat quod. Illum sapiente voluptate ut.
+                                                        </p>
+                                                        <p class="read-more"><a href="#" class="button">Đọc tiếp</a></p>
+                                                      </div>
+                                                </div>
+                                            </td>
+                                            <td class="option">
+                                                <button type="submit" class="button-check">
+                                                    <div class="check"></div>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

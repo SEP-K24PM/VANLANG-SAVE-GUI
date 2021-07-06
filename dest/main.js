@@ -7,6 +7,7 @@ function toggleNavigation() {
     $("header .mainHeader .label").toggleClass("open");
     $("header .mainHeader #sidebar .navigation").toggleClass("open");
     $("header .mainHeader #sidebar .signin-check").toggleClass("open");
+    $("header .mainHeader #sidebar .button-account").toggleClass("open");
 }
 $(logo).on("click", function () {
     toggleNavigation();
@@ -81,13 +82,72 @@ $(document).ready(function () {
             suggBox.innerHTML = listData;
         }
     } else if ($(".postdetail-page").length != 0) {
-        // let options = document.querySelector(
-        //     ".detailproduct-page .detailProduct .container .detail__right-options .val"
-        // ).textContent;
-        // const dataDisable = "trao đổi";
-        // if (options.toLowerCase() === dataDisable) {
-        //     checkOption = true;
-        // }
+        $(".button-threedots").on("click", function (e) {
+            e.preventDefault();
+            $(".navi-post").toggleClass("active");
+        });
+        $("button.edit").on("click", function (e) {
+            e.preventDefault();
+            $(".navi-post").toggleClass("active");
+            $(".detail__right form").addClass("edit");
+        });
+        $(btnCheck).on("click", function () {
+            $(btnCheck).removeClass("fillColor");
+            $(btnCheck).children().removeClass("scaleNormal");
+            $(this).toggleClass("fillColor");
+            $(this).children().toggleClass("scaleNormal");
+        });
+        $(".checkregist .button-del").on("click", function () {
+            $(btnCheck).removeClass("fillColor");
+            $(btnCheck).children().removeClass("scaleNormal");
+        });
+        $(".cmt-box .cmt-content").each(function (index, element) {
+            if ($(element).height() < 40) {
+                $(element)
+                    .closest(".cmt-box")
+                    .find(".read-more")
+                    .addClass("disable");
+            } else {
+                /**Showmore btn */
+                var $el, $ps, $up, totalHeight;
+                $(".cmt-box .button").click(function () {
+                    totalHeight = 0;
+
+                    $el = $(this);
+                    $p = $el.parent();
+                    $up = $p.parent();
+                    $ps = $up.find("p:not('.read-more')");
+
+                    $ps.each(function () {
+                        totalHeight += $(this).outerHeight();
+                    });
+
+                    $up.css({
+                        // Set height to prevent instant jumpdown when max height is removed
+                        height: $up.height(),
+                        "max-height": 9999,
+                    }).animate({
+                        height: totalHeight,
+                    });
+
+                    // fade out read-more
+                    $p.fadeOut();
+
+                    // prevent jump-down
+                    return false;
+                });
+            }
+        });
+        let option = document.querySelector(
+            ".detail__right .detail__right-options .val"
+        );
+        const dataOption = "trao đổi";
+        if (dataOption === option.textContent.toLocaleLowerCase()) {
+            document
+                .querySelector(".detail__left .detail__left-button")
+                .classList.add("trade");
+        } else {
+        }
     } else if ($(".register-exchange-page").length != 0) {
         $(btnCheck).on("click", function () {
             $(btnCheck).removeClass("fillColor");
@@ -240,47 +300,6 @@ $(document).ready(function () {
                 $(this).parent().removeClass("active");
             }
         );
-        // $(".cmt-box .cmt-content").each(function (index, element) {
-        //     if ($(element).height() < 40) {
-        //         $(element)
-        //             .closest(".cmt-box")
-        //             .find(".read-more")
-        //             .addClass("disable");
-        //     } else {
-        //         /**Showmore btn */
-        //         var $el, $ps, $up, totalHeight;
-        //         $(".cmt-box .button").click(function () {
-        //             totalHeight = 0;
-
-        //             $el = $(this);
-        //             $p = $el.parent();
-        //             $up = $p.parent();
-        //             $ps = $up.find("p:not('.read-more')");
-
-        //             $ps.each(function () {
-        //                 totalHeight += $(this).outerHeight();
-        //             });
-
-        //             $up.css({
-        //                 // Set height to prevent instant jumpdown when max height is removed
-        //                 height: $up.height(),
-        //                 "max-height": 9999,
-        //             }).animate({
-        //                 height: totalHeight,
-        //             });
-
-        //             // fade out read-more
-        //             $p.fadeOut();
-
-        //             // prevent jump-down
-        //             return false;
-        //         });
-        //     }
-        // });
-        // $(".comment-wrap .button-primary.comment").each(function(index, element){
-        //     e.preventDefault();
-        //     $(this)
-        // })
     }
 });
 
@@ -296,8 +315,6 @@ let $detailProduct = $(
 $detailProduct.flickity({
     cellAlign: "left",
     contain: true,
-    //wrapAround: true,
-    //draggable: false,
     prevNextButtons: false,
     pageDots: false,
     on: {

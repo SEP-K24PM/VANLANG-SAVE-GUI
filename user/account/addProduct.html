@@ -118,17 +118,18 @@
                     </div>
                     <div class="tableContent__title-current">
                         <a href="/user/account/inventory.html"><h3 class="blur">Quản lý kho đồ</h3></a>
-                        <p class="current__child">Thêm sản phẩm</p>
+                        <!-- Nếu làm trang addproduct thì chọn cái addproductserive, còn update thì lấy cái dưới nha-->
+                        <p class="current__child addproductservice" >Thêm món đồ</p>
+                        <p class="current__child updateproductservice" style="display: none;">Cập nhật món đồ</p>
                     </div>
                 </div>
                 <div class="tableContent__wrap">
                     <div class="tableContent__wrap-tag">
                         <ul>
                             <li><a href="/user/account/edit.html">Thông tin tài khoản</a></li>
-                            <li><a href="">Thông báo của tôi</a></li>
+                            <li><a href="/user/account/notification.html">Thông báo của tôi</a></li>
                             <li><a href="/user/account/inventory.html" class="active">Quản lý kho đồ</a></li>
                             <li><a href="/user/account/history.html">Tất cả giao dịch</a></li>
-                            <li><a href="">Quản lý đánh giá</a></li>
                         </ul>
                     </div>
                     <div class="tableContent__wrap-content">
@@ -185,7 +186,7 @@
                                     </div>
                                     <div class="data__item">
                                         <label></label>
-                                        <button type="submit" class="btn-submit">Tạo sản phẩm</button>
+                                        <button type="submit" class="btn-submit">Hoàn tất</button>
                                     </div>
                                 </form>
                             </div>
