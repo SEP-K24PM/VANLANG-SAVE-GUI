@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Grunt</title>
-    <link rel="icon" href="favicon.ico">
+    <title>VLS | Park Chae-young</title>
+    <link rel="icon" href="/img/icons/7.svg">
     <meta name="title" content="" />
     <meta name="description" content="" />
     <!-- meta facebook -->
@@ -116,13 +116,16 @@
                     <p class="not-sigin">Have an account? <a href="/signin.html">Sign in</a></p>
                     <p class="signed">Hi! </p> <!--Thêm tên user vào sau chữ Hi -->
                 </div>
-                <a href="/user/account/edit.html" class="button-account">
+                <a href="/user/profile.html" class="buttonnav account">
                     <div class="account"></div>
+                </a>
+                <a href="/user/account/edit.html" class="buttonnav setting">
+                    <div class="setting"></div>
                 </a>
                 <nav class="navigation">
                     <ul>
                         <li><a href="/index.html">Home</a></li>
-                        <li><a href="/Market.html">Market</a></li>
+                        <li><a href="/market.html">Market</a></li>
                         <li><a href="">About</a></li>
                         <li><a href="">Service</a></li>
                         <li><a href="">Contact</a></li>
@@ -149,7 +152,7 @@
                         <p class="basic-info">K24 - Khoa Kỹ thuật phần mềm</p>
                         <div class="desc-box">
                             <!--Mô tả ngắn-->
-                            <p class="short-desc">Tui là Park Chae-young,  thường được biết đến với nghệ danh Rosé. Sinh ra ở New Zealand và lớn lên ở Úc, tui chính thức ký hợp đồng với công ty YG Entertainment của của Hàn Quốc sau một buổi thử giọng vào năm 2012 và sau đó trở thành thực tập sinh tại đây trong vòng 4 năm. Tôi ra mắt với tư cách là giọng ca chính của nhóm nhạc nữ Blackpink vào tháng 8 năm 2016. Tháng 3 năm 2021, cô phát hành album đĩa đơn solo mang tên R.</p>
+                            <p class="short-desc">Tui là Park Chae-young,  thường được biết đến với nghệ danh Rosé. Sinh ra ở New Zealand và lớn lên ở Úc, tui chính thức ký hợp đồng với công ty YG Entertainment của của Hàn Quốc sau một buổi thử giọng vào năm 2012 và sau đó trở thành thực tập sinh tại đây trong vòng 4 năm. Tôi ra mắt với tư cách là giọng ca chính của nhóm nhạc nữ Blackpink vào tháng 8 năm 2016. Tháng 3 năm 2021, cô phát hành album đĩa đơn solo mang tên Rose'</p>
                             <p class="read-more"><a href="#" class="button">Đọc tiếp</a></p>
                           </div>
                         <!--TBC số sao-->
@@ -169,7 +172,7 @@
                         <a href="" class="button-primary review"><p>Đánh giá</p></a>
                     </div>
                     <div class="mainProfile__right-list">
-                        <div class="panel product">
+                        <div class="panel product active">
                             <div class="mainProfile__right-list-item">
                                 <a href="/productDetail.html">
                                     <div class="item-img">
@@ -276,6 +279,85 @@
                             </div>
                         </div>
                         <div class="panel review">
+                            <div class="mainProfile__right-list-review">
+                                <div class="left">
+                                    <img src="/img/jennie.jpg" alt="">
+                                </div>
+                                <div class="right">
+                                    <div class="right-top">
+                                        <!--Tên người đánh giá-->
+                                        <p class="name">Jennie Kim</p>
+                                        <!--Số sao đánh giá-->
+                                        <span class="stars">4</span>
+                                    </div>
+                                    <div class="right-bottom">
+                                        <div class="cmt-box">
+                                            <!--nhận xét-->
+                                            <p class="cmt-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. At similique repellendus iure placeat excepturi tempore enim sapiente corrupti laborum alias a, dicta voluptas perferendis repellat quod. Illum sapiente voluptate ut.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At similique repellendus iure placeat excepturi tempore enim sapiente corrupti laborum alias a, dicta voluptas perferendis repellat quod. Illum sapiente voluptate ut.
+                                            </p>
+                                            <p class="read-more"><a href="#" class="button">Đọc tiếp</a></p>
+                                          </div>
+                                        <!--Thời gian đăng-->
+                                        <div class="time">
+                                            <p class="val">1 days</p>
+                                            <span>ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mainProfile__right-list-review">
+                                <div class="left">
+                                    <img src="/img/Lisa.jpg" alt="">
+                                </div>
+                                <div class="right">
+                                    <div class="right-top">
+                                        <!--Tên người đánh giá-->
+                                        <p class="name">Lalisa Manoban</p>
+                                        <!--Số sao đánh giá-->
+                                        <span class="stars">5</span>
+                                    </div>
+                                    <div class="right-bottom">
+                                        <div class="cmt-box">
+                                            <!--nhận xét-->
+                                            <p class="cmt-content">Ngon quá chị ơi!
+                                            </p>
+                                            <p class="read-more"><a href="#" class="button">Đọc tiếp</a></p>
+                                          </div>
+                                        <!--Thời gian đăng-->
+                                        <div class="time">
+                                            <p class="val">1 days</p>
+                                            <span>ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mainProfile__right-list-review">
+                                <div class="left">
+                                    <img src="/img/jennie.jpg" alt="">
+                                </div>
+                                <div class="right">
+                                    <div class="right-top">
+                                        <!--Tên người đánh giá-->
+                                        <p class="name">Jennie Kim</p>
+                                        <!--Số sao đánh giá-->
+                                        <span class="stars">4</span>
+                                    </div>
+                                    <div class="right-bottom">
+                                        <div class="cmt-box">
+                                            <!--nhận xét-->
+                                            <p class="cmt-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligend
+                                            </p>
+                                            <p class="read-more"><a href="#" class="button">Đọc tiếp</a></p>
+                                          </div>
+                                        <!--Thời gian đăng-->
+                                        <div class="time">
+                                            <p class="val">1 days</p>
+                                            <span>ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="mainProfile__right-list-review">
                                 <div class="left">
                                     <img src="/img/jennie.jpg" alt="">

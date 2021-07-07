@@ -7,7 +7,7 @@ function toggleNavigation() {
     $("header .mainHeader .label").toggleClass("open");
     $("header .mainHeader #sidebar .navigation").toggleClass("open");
     $("header .mainHeader #sidebar .signin-check").toggleClass("open");
-    $("header .mainHeader #sidebar .button-account").toggleClass("open");
+    $("header .mainHeader #sidebar .buttonnav").toggleClass("open");
 }
 $(logo).on("click", function () {
     toggleNavigation();
@@ -160,6 +160,13 @@ $(document).ready(function () {
             $(btnCheck).removeClass("fillColor");
             $(btnCheck).children().removeClass("scaleNormal");
         });
+        $(".button.addproduct").on("click", function (e) {
+            e.preventDefault();
+            $(".noti").addClass("success");
+        });
+        $(".noti .close-icon").on("click", function () {
+            $(".noti").removeClass("success");
+        });
     } else if ($(".signin-page").length != 0) {
         const loginForm = document.querySelector(".signin-form");
         const showPasswordIcon =
@@ -178,8 +185,44 @@ $(document).ready(function () {
             $(this).toggleClass("fillColor");
             $(this).children().toggleClass("scaleNormal");
         });
+        $(
+            ".tableContent__wrap-content--qlkd .inventory__wrap-bottom tbody td .buttonsubmit.del "
+        ).on("click", function () {
+            $(".warning").removeClass("success");
+            $(".warning").addClass("success");
+        });
+        $(".warning .option-wrap .button-primary.accept").on(
+            "click",
+            function (e) {
+                e.preventDefault();
+                $(".warning").removeClass("success");
+                $(".noti").addClass("success");
+            }
+        );
+        $(".warning .option-wrap .button-primary.cancel").on(
+            "click",
+            function (e) {
+                e.preventDefault();
+                $(".warning").removeClass("success");
+            }
+        );
+        $(".noti .close-icon").on("click", function () {
+            $(".noti").removeClass("success");
+        });
     } else if ($(".addProduct-page").length != 0) {
-        $(".addProduct .data .btn-add").on("click", function () {
+        $(
+            ".tableContent__wrap-content--qlkd .addProduct .data__item .btn-submit"
+        ).on("click", function (e) {
+            e.preventDefault();
+            $(".noti").addClass("success");
+        });
+        $(".noti .close-icon").on("click", function () {
+            $(".noti").removeClass("success");
+        });
+        $(
+            ".tableContent__wrap-content--qlkd .addProduct .data__item .btn-submit.bđ"
+        ).on("click", function (e) {
+            e.preventDefault();
             $(".noti").addClass("success");
         });
         $(".noti .close-icon").on("click", function () {
@@ -279,12 +322,9 @@ $(document).ready(function () {
         let panel = $(".panel");
         $(document).on("click", ".tag-list .button-primary", function (e) {
             e.preventDefault();
-            panel.hide();
-            // $(".tag-list .button-primary").removeClass("active");
-            // panel.eq($(this).index()).addClass("active");
-            // $(this).addClass("active");
             $(".tag-list .button-primary").removeClass("active");
-            panel.eq($(this).index()).show();
+            panel.removeClass("active");
+            panel.eq($(this).index()).addClass("active");
             $(this).addClass("active");
         });
     } else if ($(".userAccount-history-page").length != 0) {
@@ -298,8 +338,23 @@ $(document).ready(function () {
             function (e) {
                 e.preventDefault();
                 $(this).parent().removeClass("active");
+                $(".noti").addClass("success");
             }
         );
+        $(".noti .close-icon").on("click", function () {
+            $(".noti").removeClass("success");
+        });
+    } else if ($(".userAccount-edit-page").length != 0) {
+        $(".tableContent__wrap-content--tttk .data__item .btn-submit").on(
+            "click",
+            function (e) {
+                e.preventDefault();
+                $(".noti").addClass("success");
+            }
+        );
+        $(".noti .close-icon").on("click", function () {
+            $(".noti").removeClass("success");
+        });
     }
 });
 
