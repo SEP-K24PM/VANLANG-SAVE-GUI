@@ -37,20 +37,25 @@ $(document).ready(function () {
     });
 
     //active notitable
-    $("header .notitable").hide();
     $("header .detailHeader .right-wrap ul li .alarmnoti").on(
         "click",
         function (e) {
             e.preventDefault();
-            $(this).toggleClass("active");
-            $("header .notitable").toggle();
+            setTimeout(function () {
+                $(
+                    "header .detailHeader .right-wrap ul li .alarmnoti"
+                ).toggleClass("active");
+                $("header .notitable").toggleClass("active");
+            }, 300);
         }
     );
     $("main").click(function () {
         $("header .detailHeader .right-wrap ul li .alarmnoti").removeClass(
             "active"
         );
-        $("header .notitable").hide();
+        setTimeout(function () {
+            $("header .notitable").removeClass("active");
+        }, 300);
     });
     function showNoti() {
         setTimeout(function () {
