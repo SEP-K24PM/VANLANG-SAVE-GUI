@@ -1,19 +1,34 @@
-let logo = document.querySelector("header .mainHeader #burgerMenuIcon");
+let logo = document.querySelector(
+    "header .mainHeader #burgerMenuIcon #menu_checkbox"
+);
 let openHeader = document.querySelector("header .mainHeader");
 let btnCheck = $(".button-check");
-function toggleNavigation() {
-    $("header .mainHeader").toggleClass("open");
-    $("header .mainHeader .blacklayer").toggleClass("open");
-    $("header .mainHeader .label").toggleClass("open");
-    $("header .mainHeader #sidebar .navigation").toggleClass("open");
-    $("header .mainHeader #sidebar .signin-check").toggleClass("open");
-    $("header .mainHeader #sidebar .buttonnav").toggleClass("open");
+function removeNavigation() {
+    $("header .mainHeader").removeClass("open");
+    $("header .mainHeader .blacklayer").removeClass("open");
+    $("header .mainHeader .label").removeClass("open");
+    $("header .mainHeader #sidebar .navigation").removeClass("open");
+    $("header .mainHeader #sidebar .signin-check").removeClass("open");
+    $("header .mainHeader #sidebar .buttonnav").removeClass("open");
+}
+function addNavigation() {
+    $("header .mainHeader").addClass("open");
+    $("header .mainHeader .blacklayer").addClass("open");
+    $("header .mainHeader .label").addClass("open");
+    $("header .mainHeader #sidebar .navigation").addClass("open");
+    $("header .mainHeader #sidebar .signin-check").addClass("open");
+    $("header .mainHeader #sidebar .buttonnav").addClass("open");
 }
 $(logo).on("click", function () {
-    toggleNavigation();
+    if (this.checked != false) {
+        addNavigation();
+    } else {
+        removeNavigation();
+    }
 });
 $("header .mainHeader .blacklayer").on("click", function () {
-    toggleNavigation();
+    removeNavigation();
+    $(logo).prop("checked", false);
 });
 
 $(document).ready(function () {
@@ -203,6 +218,24 @@ $(document).ready(function () {
                 .classList.add("trade");
         } else {
         }
+        $(".detail__right .navi-post .report").on("click", function (e) {
+            e.preventDefault();
+            $(".black-layer").addClass("open");
+            $(".report-form").addClass("open");
+        });
+        $(".report-form .button-close").on("click", function () {
+            $(".black-layer").removeClass("open");
+            $(".report-form").removeClass("open");
+        });
+        $(".detail__right .navi-post .del").on("click", function(e){
+            e.preventDefault();
+            $(".black-layer").addClass("open");
+            $(".warning-delete-post-form").addClass("open");
+        });
+        $(".warning-delete-post-form .opt-wrap .button.delpostn").on("click",function(){
+            $(".black-layer").removeClass("open");
+            $(".warning-delete-post-form").removeClass("open");
+        })
     } else if ($(".register-exchange-page").length != 0) {
         $(btnCheck).on("click", function () {
             $(btnCheck).removeClass("fillColor");
