@@ -289,61 +289,6 @@ $(btnPaging).on("click", function () {
   $(this).toggleClass("active");
 });
 
-let $detailProduct = $(
-  ".postdetail-page .postDetail .container .detail__left .detail__left-slider"
-);
-$detailProduct.flickity({
-  cellAlign: "left",
-  contain: true,
-  prevNextButtons: false,
-  pageDots: false,
-  on: {
-    change: function (index) {
-      let number = $(
-        ".postdetail-page .postDetail .container .detail__left .detail__left-valimg span"
-      );
-      let indexPage = index + 1;
-      number.text(indexPage.toString().padStart(1));
-    },
-  },
-});
-$(
-  ".postdetail-page .postDetail .container .detail__left .detail__left-button .btn.prev"
-).on("click", function () {
-  $detailProduct.flickity("previous");
-});
-
-$(
-  ".postdetail-page .postDetail .container .detail__left .detail__left-button .btn.next"
-).on("click", function () {
-  $detailProduct.flickity("next");
-});
-let $anotherProduct = $(
-  ".postdetail-page .anotherProduct .container .mainProduct__list"
-);
-
-$anotherProduct.flickity({
-  cellAlign: "left",
-  contain: true,
-  //wrapAround: true,
-  //draggable: false,
-  prevNextButtons: false,
-  pageDots: false,
-});
-$(".postdetail-page .anotherProduct .container .product__button .btn.prev").on(
-  "click",
-  function () {
-    $anotherProduct.flickity("previous");
-  }
-);
-
-$(".postdetail-page .anotherProduct .container .product__button .btn.next").on(
-  "click",
-  function () {
-    $anotherProduct.flickity("next");
-  }
-);
-
 $(".searchWrap .search-input input").on("keyup", function () {
   var value = $(this).val().toLowerCase();
   $(".inventory .inventory__wrap-bottom table tbody tr").filter(function () {
