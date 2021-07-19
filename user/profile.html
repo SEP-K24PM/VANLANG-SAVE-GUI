@@ -98,40 +98,6 @@
 
 <body>
     <header>
-        <div class="mainHeader">
-            <div class="blacklayer">
-            </div>
-            <div id="burgerMenuIcon">
-                <div id="webapp_cover">
-                    <div id="menu_button">
-                        <input type="checkbox" id="menu_checkbox">
-                        <label for="menu_checkbox" id="menu_label">
-                            <div id="menu_text_bar"></div>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div id="sidebar">
-                <div class="logo">
-                </div>
-                <div class="signin-check">
-                    <p class="not-sigin">Have an account? <a href="/signin.html">Sign in</a></p>
-                    <p class="signed">Hi! </p>
-                    <!--Thêm tên user vào sau chữ Hi -->
-                </div>
-                <nav class="navigation">
-                    <ul>
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/market.html">Market</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Service</a></li>
-                        <li><a href="">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="colorbar" style="height: 100%; top: 0%; opacity: 1; background-color: transparent;"></div>
-                <!-- #626657 -->
-            </div>
-        </div>
         <div class="detailHeader">
             <div class="container-fluid">
                 <div class="minimenu">
@@ -144,22 +110,29 @@
                 </a>
                 <div class="right-wrap">
                     <ul>
-                        <li>
-                            <a href="/user/profile.html" class="account">
+                        <!-- <li>
+                            <a href="/user/profile.html" class="texta">
                                 Trang cá nhân
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="/user/account/addPost.html" class="account">
+                            <a href="/user/account/addPost.html" class="texta">
                                 Đăng bài
                             </a>
                         </li>
                         <li>
-                            <a href="" class="alarmnoti">
+                            <a href="" class="btncircle alarmnoti">
                                 <div class="img">
                                     <img src="/img/icons/bell.svg" alt="">
                                 </div>
                                 <span class="number">10</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="btncircle account">
+                                <div class="img">
+                                    <img src="/img/icons/drop-down-arrow.svg" alt="">
+                                </div>
                             </a>
                         </li>
                     </ul>
@@ -260,6 +233,25 @@
                     </div>
                 </a>
             </div>
+        </div>
+        <div class="nav-dropdown">
+            <div class="user-wrap">
+                <div class="default-image">
+                    <img src="/img/icons/user.svg" alt="">
+                </div>
+                <div class="text-wrap">
+                    <p>NGƯỜI DÙNG</p>
+                    <!-- Email: -->
+                    <p class="email">duy.187it06776@vanlanguni.vn</p>
+                </div>
+            </div>
+            <ul>
+                <li><a href="/user/profile.html">Trang cá nhân</a></li>
+                <li><a href="/user/account/inventory.html">Tài khoản</a></li>
+                <li>
+                    <form action=""><button type="">Đăng xuất</button></form>
+                </li>
+            </ul>
         </div>
     </header>
     <main class="userProfile-page">
@@ -422,13 +414,7 @@
                                         <div class="cmt-box">
                                             <!--nhận xét-->
                                             <p class="cmt-content">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit. At similique repellendus iure placeat excepturi tempore enim
-                                                sapiente corrupti laborum alias a, dicta voluptas perferendis repellat
-                                                quod. Illum sapiente voluptate ut.
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. At similique
-                                                repellendus iure placeat excepturi tempore enim sapiente corrupti
-                                                laborum alias a, dicta voluptas perferendis repellat quod. Illum
-                                                sapiente voluptate ut.
+                                                elit. At similique repellendus iure placeat
                                             </p>
                                             <p class="read-more"><a href="#" class="button">Đọc tiếp</a></p>
                                         </div>
@@ -499,13 +485,7 @@
                                         <div class="cmt-box">
                                             <!--nhận xét-->
                                             <p class="cmt-content">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit. At similique repellendus iure placeat excepturi tempore enim
-                                                sapiente corrupti laborum alias a, dicta voluptas perferendis repellat
-                                                quod. Illum sapiente voluptate ut.
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. At similique
-                                                repellendus iure placeat excepturi tempore enim sapiente corrupti
-                                                laborum alias a, dicta voluptas perferendis repellat quod. Illum
-                                                sapiente voluptate ut.
+                                                elit. At similique repellendus iure placeat
                                             </p>
                                             <p class="read-more"><a href="#" class="button">Đọc tiếp</a></p>
                                         </div>

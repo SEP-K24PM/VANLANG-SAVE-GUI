@@ -62,8 +62,16 @@ $(document).ready(function () {
         );
         $("header .notitable").toggleClass("active");
       }, 300);
+      //** Remove button another*/
+      $("header .detailHeader .right-wrap ul li .account").removeClass(
+        "active"
+      );
+      setTimeout(function () {
+        $("header .nav-dropdown").removeClass("active");
+      }, 300);
     }
   );
+
   $("main").click(function () {
     $("header .detailHeader .right-wrap ul li .alarmnoti").removeClass(
       "active"
@@ -71,7 +79,32 @@ $(document).ready(function () {
     setTimeout(function () {
       $("header .notitable").removeClass("active");
     }, 300);
+    //** */
+    $("header .detailHeader .right-wrap ul li .account").removeClass("active");
+    setTimeout(function () {
+      $("header .nav-dropdown").removeClass("active");
+    }, 300);
   });
+  //active nav-dropdown
+  $("header .detailHeader .right-wrap ul li .account").on(
+    "click",
+    function (e) {
+      e.preventDefault();
+      setTimeout(function () {
+        $("header .detailHeader .right-wrap ul li .account").toggleClass(
+          "active"
+        );
+        $("header .nav-dropdown").toggleClass("active");
+      }, 300);
+      //** Remove button another*/
+      $("header .detailHeader .right-wrap ul li .alarmnoti").removeClass(
+        "active"
+      );
+      setTimeout(function () {
+        $("header .notitable").removeClass("active");
+      }, 300);
+    }
+  );
   if ($(".home-page").length != 0) {
   } else if ($(".market-page").length != 0) {
   } else if ($(".postdetail-page").length != 0) {
