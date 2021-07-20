@@ -306,31 +306,12 @@ $(document).ready(function () {
       $(this).addClass("active");
     });
   } else if ($(".userAccount-history-page").length != 0) {
-    // $(".comment-wrap .button-primary.comment").on("click", function (e) {
-    //   e.preventDefault();
-    //   $(".comment-wrap .comment-box").removeClass("active");
-    //   $(this).parent().find(".comment-box").addClass("active");
-
-    // });
-
-    let btnRating = $(".comment-wrap .button-primary.comment");
-    $(btnRating).each(function (rating_index, rating_element) {
-      $(rating_element).on("click", function (e) {
-        e.preventDefault();
-        $(".comment-wrap .comment-box").removeClass("active");
-        $(this).parent().find(".comment-box").addClass("active");
-
-        $(this)
-          .parent()
-          .find(".comment-box .rating-case .star")
-          .on("click", function () {
-            $(this)
-              .parents("form")
-              .find(".button-primary.sendComment")
-              .addClass("active");
-          });
-        // .addClass("active");
-      });
+  } else if ($(".userAccount-rating-page").length != 0) {
+    $(".productRating__ratingbox-case .star").on("click", function () {
+      $(this)
+        .parents("form")
+        .find(".button-primary.sendComment")
+        .addClass("active");
     });
   } else if ($(".userAccount-edit-page").length != 0) {
   } else if ($(".userAccount-notification-page").length != 0) {

@@ -254,24 +254,25 @@
             </ul>
         </div>
     </header>
-    <main class="userAccount-history-page">
+    <main class="userAccount-rating-page">
         <section class="tableContent">
             <div class="containerAccount">
                 <div class="tableContent__title">
                     <div class="tableContent__title-user">
                         <div class="avt">
-                            <img src="/img/icons/user.svg" alt="">
+                            <img src="/img/rose-10.jpg" alt="">
                         </div>
                         <div class="name">
                             <p>Tài khoản của</p>
                             <!--tên user-->
-                            <p class="val">duy.187it06776</p>
+                            <p class="val">Ngo Quang Nhat Duy</p>
                         </div>
                     </div>
                     <div class="tableContent__title-current">
-                        <a href="/user/account/history.html">
-                            <h3>Lịch sử giao dịch</h3>
+                        <a href="/user/account/inventory.html">
+                            <h3 class="blur">Tất cả giao dịch</h3>
                         </a>
+                        <p class="current__child addproductservice">Đánh giá</p>
                     </div>
                 </div>
                 <div class="tableContent__wrap">
@@ -283,122 +284,47 @@
                         </ul>
                     </div>
                     <div class="tableContent__wrap-content">
-                        <div class="tableContent__wrap-content--lsgd">
-                            <div class="inventory">
-                                <div class="inventory__wrap">
-                                    <div class="inventory__wrap-top">
-                                        <div class="searchWrap">
-                                            <div class="search-input">
-                                                <a href="" target="_blank" hidden></a>
-                                                <input type="text" placeholder="Tìm kiếm..">
-                                                <i class="icon"><img src="/img/icons/icons8-search.svg"></img></i>
+                        <div class="tableContent__wrap-content--dg">
+                            <div class="productRating">
+                                <div class="productRating__img">
+                                    <img src="/img/027e5893146889.5e5d8a484f5c4.jpg" alt="">
+                                </div>
+                                <div class="productRating__wrapInfo">
+                                    <p class="productRating__wrapInfo-nameProd">Hộp nhạc kỉ niệm tình iu chúng ta</p>
+                                    <p>Trao đổi với</p>
+                                    <a class="productRating__wrapInfo-linkprofile" href="/user/profile.html">Park
+                                        Chaeyoung</a>
+                                    <p class="status status-done">Hoàn tất</p>
+                                </div>
+                                <div class="productRating__ratingbox">
+                                    <form action="">
+                                        <div class="productRating__ratingbox-case">
+                                            <input class="star star-5" id="star-5" type="radio" name="star" value="5" />
+                                            <label class="star star-5" for="star-5"><span
+                                                    class="star-empty"></span></label>
+                                            <input class="star star-4" id="star-4" type="radio" name="star" value="4" />
+                                            <label class="star star-4" for="star-4"><span
+                                                    class="star-empty"></span></label>
+                                            <input class="star star-3" id="star-3" type="radio" name="star" value="3" />
+                                            <label class="star star-3" for="star-3"><span
+                                                    class="star-empty"></span></label>
+                                            <input class="star star-2" id="star-2" type="radio" name="star" value="2" />
+                                            <label class="star star-2" for="star-2"><span
+                                                    class="star-empty"></span></label>
+                                            <input class="star star-1" id="star-1" type="radio" name="star" value="1" />
+                                            <label class="star star-1" for="star-1"><span
+                                                    class="star-empty"></span></label>
+                                            <div class="rev-box">
+                                                <textarea class="review" col="30" name="review"></textarea>
+                                                <label class="review" for="review">Viết
+                                                    đánh
+                                                    giá</label>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="inventory__wrap-bottom">
-                                        <table class="table-scroll small-first-col">
-                                            <thead>
-                                                <tr>
-                                                    <th>Sản phẩm</th>
-                                                    <th>Thể loại</th>
-                                                    <th>Số lượng</th>
-                                                    <th>Trạng thái</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="body-half-screen">
-                                                <tr>
-                                                    <td class="name">
-                                                        <div class="img"><img
-                                                                src="/img/027e5893146889.5e5d8a484f5c4.jpg" alt="">
-                                                        </div>
-                                                        <div class="wrap-info">
-                                                            <!--Tên món đồ-->
-                                                            <a href="" class="name-prod">Hộp nhạc kỉ niệm tình iu chúng
-                                                                ta</a>
-                                                            <p>Trao đổi với</p>
-                                                            <!--Tên và đường dẫn profile người dùng-->
-                                                            <a class="profile" href="/user/profile.html">Park
-                                                                Chaeyoung</a>
-                                                            <div class="comment-wrap">
-                                                                <a href="/user/account/rating.html"
-                                                                    class="button-primary comment">
-                                                                    <p>Đánh giá</p>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td class="type">Đồ lưu niệm</td>
-                                                    <td class="quantity">1</td>
-                                                    <td>
-                                                        <p class="status status-done">Hoàn tất</p>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="name">
-                                                        <div class="img"><img
-                                                                src="/img/027e5893146889.5e5d8a484f5c4.jpg" alt="">
-                                                        </div>
-                                                        <div class="wrap-info">
-                                                            <!--Tên món đồ-->
-                                                            <a href="" class="name-prod">Hộp nhạc kỉ niệm tình iu chúng
-                                                                ta</a>
-                                                            <p>Trao đổi với</p>
-                                                            <!--Tên và đường dẫn profile người dùng-->
-                                                            <a class="profile" href="/user/profile.html">Park
-                                                                Chaeyoung</a>
-                                                            <div class="comment-wrap">
-                                                                <a href="/user/account/rating.html"
-                                                                    class="button-primary comment">
-                                                                    <p>Đánh giá</p>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td class="type">Đồ lưu niệm</td>
-                                                    <td class="quantity">1</td>
-                                                    <td>
-                                                        <p class="status status-cancel">Hủy</p>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="name">
-                                                        <div class="img"><img
-                                                                src="/img/027e5893146889.5e5d8a484f5c4.jpg" alt="">
-                                                        </div>
-                                                        <div class="wrap-info">
-                                                            <!--Tên món đồ-->
-                                                            <a href="" class="name-prod">Hộp nhạc kỉ niệm tình iu chúng
-                                                                ta</a>
-                                                            <p>Trao đổi với</p>
-                                                            <!--Tên và đường dẫn profile người dùng-->
-                                                            <a class="profile" href="/user/profile.html">Park
-                                                                Chaeyoung</a>
-                                                            <div class="comment-wrap">
-                                                                <a href="/user/account/rating.html"
-                                                                    class="button-primary comment">
-                                                                    <p>Đánh giá</p>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td class="type">Đồ lưu niệm</td>
-                                                    <td class="quantity">1</td>
-                                                    <td>
-                                                        <label class="onOffpost">
-                                                            <input type="checkbox">
-                                                            <span>
-                                                                <em></em>
-                                                                <strong></strong>
-                                                                <button type="submit" class="btncheckbox done">Hoàn
-                                                                    tất</button>
-                                                                <button type="submit"
-                                                                    class="btncheckbox cancel">Hủy</button>
-                                                            </span>
-                                                        </label>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                        <button type="submit" class="button-primary sendComment">
+                                            <p>Gửi</p>
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -420,7 +346,7 @@
                         <a href="">Press</a>
                     </li>
                 </ul>
-                <div class="logoimg"><img src="/img/icons/10.svg" alt=""></div>
+                <div class="logoimg"><img src="img/icons/10.svg" alt=""></div>
             </div>
             <div class="bottomWrap">
                 <p class="textWrap">
