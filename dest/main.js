@@ -36,20 +36,20 @@ $(document).ready(function () {
   const indexActive = $("header .mainHeader .navigation ul li").index(
     currentActive
   );
-  $("header .mainHeader .navigation ul li").each(function (
-    li_index,
-    li_element
-  ) {
-    $(li_element)
-      .mouseover(function () {
-        $(this).siblings().removeClass("active");
-      })
-      .mouseleave(function () {
-        $("header .mainHeader .navigation ul li")
-          .eq(indexActive)
-          .addClass("active");
-      });
-  });
+  // $("header .mainHeader .navigation ul li").each(function (
+  //   li_index,
+  //   li_element
+  // ) {
+  //   $(li_element)
+  //     .mouseover(function () {
+  //       $(this).siblings().removeClass("active");
+  //     })
+  //     .mouseleave(function () {
+  //       $("header .mainHeader .navigation ul li")
+  //         .eq(indexActive)
+  //         .addClass("active");
+  //     });
+  // });
 
   //active notitable
   $("header .detailHeader .right-wrap ul li .alarmnoti").on(
